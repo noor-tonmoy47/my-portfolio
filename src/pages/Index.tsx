@@ -1,4 +1,3 @@
-
 import { Github, Linkedin, Mail, MapPin, Phone, ExternalLink, Code, Database, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -318,16 +317,30 @@ const Index = () => {
           
           <Card className="hover-scale">
             <CardHeader>
-              <CardTitle className="text-xl text-gray-800">
-                Bachelor of Engineering in Software Engineering
-              </CardTitle>
-              <CardDescription className="text-lg">
-                <span className="text-blue-600 font-medium">Shahjalal University of Science & Technology</span>
-                <br />
-                Feb 2020 – present (Last Semester)
-                <br />
-                Sylhet, Bangladesh
-              </CardDescription>
+              <div className="flex justify-between items-start">
+                <div className="flex-1">
+                  <CardTitle className="text-xl text-gray-800">
+                    Bachelor of Engineering in Software Engineering
+                  </CardTitle>
+                  <CardDescription className="text-lg">
+                    <span className="text-blue-600 font-medium">Shahjalal University of Science & Technology</span>
+                    <br />
+                    Feb 2020 – Mar 2025
+                    <br />
+                    Sylhet, Bangladesh
+                  </CardDescription>
+                </div>
+                <div className="ml-6 flex-shrink-0">
+                  {/* University Logo */}
+                  <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center border">
+                    <img 
+                      src="/placeholder.svg" 
+                      alt="SUST Logo" 
+                      className="w-12 h-12 object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
             </CardHeader>
           </Card>
         </div>
