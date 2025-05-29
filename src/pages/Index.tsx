@@ -1,10 +1,17 @@
-
 import { Github, Linkedin, Mail, MapPin, Phone, ExternalLink, Code, Database, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Index = () => {
+  const heroAnimation = useScrollAnimation(0.2);
+  const experienceAnimation = useScrollAnimation(0.1);
+  const projectsAnimation = useScrollAnimation(0.1);
+  const skillsAnimation = useScrollAnimation(0.1);
+  const educationAnimation = useScrollAnimation(0.1);
+  const contactAnimation = useScrollAnimation(0.1);
+
   const experiences = [
     {
       title: "Assistant Software Engineer",
@@ -93,7 +100,11 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="about" className="py-20 px-6">
+      <section 
+        ref={heroAnimation.ref} 
+        id="about" 
+        className={`py-20 px-6 fade-in-section ${heroAnimation.isVisible ? 'visible' : ''}`}
+      >
         <div className="container mx-auto max-w-4xl text-center">
           <div className="animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
@@ -143,7 +154,11 @@ const Index = () => {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-20 px-6 bg-white/50">
+      <section 
+        ref={experienceAnimation.ref}
+        id="experience" 
+        className={`py-20 px-6 bg-white/50 fade-in-section ${experienceAnimation.isVisible ? 'visible' : ''}`}
+      >
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Professional Experience
@@ -176,7 +191,11 @@ const Index = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6">
+      <section 
+        ref={projectsAnimation.ref}
+        id="projects" 
+        className={`py-20 px-6 fade-in-section ${projectsAnimation.isVisible ? 'visible' : ''}`}
+      >
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Featured Projects
@@ -227,7 +246,10 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 px-6 bg-white/50">
+      <section 
+        ref={skillsAnimation.ref}
+        className={`py-20 px-6 bg-white/50 fade-in-section ${skillsAnimation.isVisible ? 'visible' : ''}`}
+      >
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Technical Skills
@@ -310,7 +332,10 @@ const Index = () => {
       </section>
 
       {/* Education Section */}
-      <section className="py-20 px-6">
+      <section 
+        ref={educationAnimation.ref}
+        className={`py-20 px-6 fade-in-section ${educationAnimation.isVisible ? 'visible' : ''}`}
+      >
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Education
@@ -318,23 +343,41 @@ const Index = () => {
           
           <Card className="hover-scale">
             <CardHeader>
-              <CardTitle className="text-xl text-gray-800">
-                Bachelor of Engineering in Software Engineering
-              </CardTitle>
-              <CardDescription className="text-lg">
-                <span className="text-blue-600 font-medium">Shahjalal University of Science & Technology</span>
-                <br />
-                Feb 2020 – present (Last Semester)
-                <br />
-                Sylhet, Bangladesh
-              </CardDescription>
+              <div className="flex justify-between items-start">
+                <div className="flex-1">
+                  <CardTitle className="text-xl text-gray-800">
+                    Bachelor of Engineering in Software Engineering
+                  </CardTitle>
+                  <CardDescription className="text-lg">
+                    <span className="text-blue-600 font-medium">Shahjalal University of Science & Technology</span>
+                    <br />
+                    Feb 2020 – Mar 2025
+                    <br />
+                    Sylhet, Bangladesh
+                  </CardDescription>
+                </div>
+                <div className="ml-6 flex-shrink-0">
+                  {/* University Logo */}
+                  <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center border">
+                    <img 
+                      src="/placeholder.svg" 
+                      alt="SUST Logo" 
+                      className="w-12 h-12 object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
             </CardHeader>
           </Card>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+      <section 
+        ref={contactAnimation.ref}
+        id="contact" 
+        className={`py-20 px-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white fade-in-section ${contactAnimation.isVisible ? 'visible' : ''}`}
+      >
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl font-bold mb-8">Let's Work Together</h2>
           <p className="text-xl mb-12 opacity-90">
