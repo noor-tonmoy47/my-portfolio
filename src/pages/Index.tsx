@@ -8,14 +8,14 @@ const Index = () => {
   const experiences = [
     {
       title: "Assistant Software Engineer",
-      company: "Omonokom Projukti Limited",
+      company: "Onnorokom Projukti Limited",
       period: "Apr 2025 – present",
       location: "Dhaka, Bangladesh",
       description: "Currently working on integrating real time messaging and file sharing service inside Udvash online course portal using .NET API in Backend and React in frontend"
     },
     {
       title: "Software Development Intern",
-      company: "Omonokom Projukti Limited", 
+      company: "Onnorokom Projukti Limited", 
       period: "Oct 2024 – Mar 2025",
       location: "Dhaka, Bangladesh",
       description: "Developed a Meeting Room Booking System using .NET Core MVC, streamlining room scheduling and management for employees."
@@ -72,7 +72,7 @@ const Index = () => {
         <div className="container mx-auto px-6 py-4">
           <nav className="flex justify-between items-center">
             <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Sams Noor
+              Tonmoy
             </h1>
             <div className="flex gap-4">
               <Button variant="ghost" size="sm" asChild>
@@ -126,13 +126,13 @@ const Index = () => {
             {/* Social Links */}
             <div className="flex justify-center gap-4">
               <Button variant="outline" size="lg" asChild className="hover-scale">
-                <a href="https://github.com/tonmoy" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/noor-tonmoy47" target="_blank" rel="noopener noreferrer">
                   <Github className="w-5 h-5 mr-2" />
                   GitHub
                 </a>
               </Button>
               <Button variant="outline" size="lg" asChild className="hover-scale">
-                <a href="https://linkedin.com/in/tonmoy" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/in/md-sams-noor-tonmoy-7365642b3/" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="w-5 h-5 mr-2" />
                   LinkedIn
                 </a>
