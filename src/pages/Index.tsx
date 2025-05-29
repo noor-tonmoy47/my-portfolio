@@ -6,11 +6,11 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Index = () => {
   const heroAnimation = useScrollAnimation(0.2);
-  const experienceAnimation = useScrollAnimation(0.1);
-  const projectsAnimation = useScrollAnimation(0.1);
-  const skillsAnimation = useScrollAnimation(0.1);
-  const educationAnimation = useScrollAnimation(0.1);
-  const contactAnimation = useScrollAnimation(0.1);
+  const experienceAnimation = useScrollAnimation(0.5);
+  const projectsAnimation = useScrollAnimation(0.5);
+  const skillsAnimation = useScrollAnimation(0.5);
+  const educationAnimation = useScrollAnimation(0.5);
+  const contactAnimation = useScrollAnimation(0.5);
 
   const experiences = [
     {
@@ -114,8 +114,7 @@ const Index = () => {
               Assistant Software Engineer
             </p>
             <p className="text-lg text-gray-700 mb-12 leading-relaxed max-w-3xl mx-auto">
-              Passionate full-stack developer with expertise in .NET, React, and modern web technologies. 
-              Currently building real-time messaging systems and course management platforms at Omonokom Projukti Limited.
+              A Backend Engineering Enthusiast
             </p>
             
             {/* Contact Info */}
